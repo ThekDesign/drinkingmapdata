@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../../../favicon.ico">
+
+	<title>Drinking!</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="style.css" rel="stylesheet">
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="#">Find Drinking Fountains</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+		<div class="collapse navbar-collapse navbar-collapse-center" id="navbarCollapse">
+			<ul class="nav navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="main_title">
+		<div class="story">
+			<div class="text-center main-text">
+				<h2>GET SOME WATER!!!</h2>
+				<br>
+				<div class="ui-widget">
+					<label for="searchbar"></label>
+					<input id="searchbar">
+				</div>
+				<button class="btn_search" type="button">Search</button>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<ul id="list">
+
+		</ul>
+	</div>
+
+	<div id="map"></div>
+	<div class="footer_bottom">
+		<p>&copy; 2017 by Thek.</p>
+	</div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script>
+		window.jQuery || document.write('<script src="../../../../js/vendor/jquery.min.js"><\/script>')
+	</script>
+
+	<script src="../../../../js/vendor/popper.min.js"></script>
+	<script src="../../../../dist/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../../../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/firebasemap.js"></script>
+	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4i69kIcID3A4WKeJu9ICzCIQDytSe9Zk&callback=initMap" async defer></script>
+	<!--Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+</body>
+
+</html>

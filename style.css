@@ -1,0 +1,58 @@
+html {
+  height: 100%; }
+
+body {
+  min-height: 75rem;
+  padding-top: 3.5rem;
+  height: 100%; }
+
+#map {
+  height: 50%; }
+
+#main_title {
+  background-image: url(images/water_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  height: 50%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative; }
+
+.btn_search {
+  height: 2rem;
+  width: auto; }
+
+.navbar-center {
+  display: inline;
+  float: none;
+  vertical-align: top; }
+
+.navbar-collapse-center {
+  text-align: center; }
+
+.jumbotron {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.text-center {
+  text-align: center;
+  vertical-align: middle; }
+
+.main-text {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0; }
+
+.footer_bottom {
+  background-color: gainsboro;
+  text-align: center;
+  vertical-align: middle;
+  height: 4%; }
+  .footer_bottom p {
+    padding-top: 2%;
+    font-size: 0.75rem; }
+
+/*# sourceMappingURL=style.css.map */
