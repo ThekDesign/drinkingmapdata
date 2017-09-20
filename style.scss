@@ -1,14 +1,18 @@
 $height-background: 100%;
 $width-background: 100%;
 $title-font-color: grey;
+$Mainfont:'Noto Sans TC',
+sans-serif;
 html {
 	height: $height-background;
+	font-family: $Mainfont;
 }
 
 body {
 	min-height: 75rem;
 	padding-top: 3.5rem;
 	height: $height-background;
+	font-family: $Mainfont;
 }
 
 #map {
@@ -59,13 +63,42 @@ body {
 	right: 0;
 }
 
+input[type=search] {
+	font-family: $Mainfont;
+	font-size: 1.2em;
+	background-color: white;
+	border: 0;
+}
+
+
+/*Css to target the dropdownbox*/
+
+.ui-autocomplete {
+	color: black;
+	font-size: 1.2em;
+	text-decoration: none;
+	background-color: white;
+	list-style-type: none;
+	width: 1.5rem;
+	cursor: pointer;
+	padding-left: 0.3rem;
+	li :hover {
+		padding-left: 0.3rem;
+		background-color: aliceblue;
+	}
+}
+
 .footer_bottom {
 	background-color: gainsboro;
 	text-align: center;
 	vertical-align: middle;
-	height: 4%;
+	height: 5%;
+	position: relative;
 	p {
-		padding-top: 2%;
+		position: absolute;
+		top: 45%;
+		left: 0;
+		right: 0;
 		font-size: 0.75rem;
 	}
 }
