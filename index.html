@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 
 <head>
 	<meta charset="utf-8">
@@ -19,6 +19,7 @@
 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -45,9 +46,22 @@
 				<h2>去找水!!!</h2>
 				<br>
 				<div class="ui-widget">
-					<label for="searchbar"></label>
+					<label for="searchTerm"></label>
+					<!--
 					<input id="searchbar" type="search">
 					<button id="btn_search" type="button">Search</button>
+-->
+					<div class="wrap">
+						<div class="search">
+							<input type="text" class="searchTerm" placeholder="想喝水嗎？喝水最健康！">
+							<button type="submit" class="searchButton">
+                            <i class="fa fa-search"></i>
+                            </button>
+							<button type="submit" class="refreshButton">
+                            <i class="fa fa-refresh"></i>
+                            </button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -60,10 +74,6 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script>
-		window.jQuery || document.write('<script src="../../../../js/vendor/jquery.min.js"><\/script>')
-
-	</script>
 
 	<script src="../../../../js/vendor/popper.min.js"></script>
 	<script src="../../../../dist/js/bootstrap.min.js"></script>
@@ -71,9 +81,10 @@
 	<script src="../../../../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="js/firebasemap.js"></script>
 	<script src="js/markerclusterer.js"></script>
+	<script src="js/underscore-min.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4i69kIcID3A4WKeJu9ICzCIQDytSe9Zk&callback=initialize" async defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4i69kIcID3A4WKeJu9ICzCIQDytSe9Zk" async defer></script>
 	<!--Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
 </body>
