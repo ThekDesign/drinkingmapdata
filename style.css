@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 html {
   height: 100%;
   font-family: "Noto Sans TC", sans-serif; }
@@ -116,14 +117,16 @@ input[type=search] {
     padding-left: 0.3rem;
     background-color: aliceblue; }
 
-div.ui-helper-hidden-accessible {
-  display: none; }
+.ui-helper-hidden-accessible {
+  display: none;
+  visibility: hidden; }
 
 .footer_bottom {
   background-color: gainsboro;
   text-align: center;
   vertical-align: middle;
-  position: relative; }
+  position: relative;
+  height: 1%; }
   .footer_bottom p {
     position: absolute;
     top: 45%;
