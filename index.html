@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-<!--	<link rel="icon" href="../../../../favicon.ico">-->
+	<!--	<link rel="icon" href="../../../../favicon.ico">-->
 	<title>Drinking!</title>
 
 	<!-- Bootstrap core CSS -->
@@ -18,6 +18,7 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -74,7 +75,7 @@
 							<button type="submit" class="searchButton">
                             <i class="fa fa-search"></i>
                             </button>
-							<button type="submit" class="refreshButton">
+							<button type="submit" class="refreshButton" v-on:click="testbutton">
                             <i class="fa fa-refresh"></i>
                             </button>
 						</div>
@@ -83,13 +84,18 @@
 			</div>
 		</div>
 	</div>
-	<div id="map"></div>
+	<div id="map">
+	</div>
 	<div class="footer_bottom">
 		<p>&copy; 2017 by Thek.</p>
 	</div>
 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
+	<!--Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+	<!--	Vue的script-->
+	<script src="https://unpkg.com/vue"></script>
 
 	<!-- Placed at the end of the document so the pages load faster -->
 
@@ -101,14 +107,11 @@
 	<script src="js/firebasemap.js"></script>
 	<script src="js/markerclusterer.js"></script>
 	<script src="js/underscore-min.js"></script>
-	<!--	Vue的script-->
-<!--	<script src="https://unpkg.com/vue"></script>-->
 
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4i69kIcID3A4WKeJu9ICzCIQDytSe9Zk" async defer></script>
-	<!--Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+
 </body>
 
 </html>
