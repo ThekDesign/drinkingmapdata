@@ -2,115 +2,117 @@
 <html lang="zh-tw">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<!--	<link rel="icon" href="../../../../favicon.ico">-->
-	<title>Drinking!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--	<link rel="icon" href="../../../../favicon.ico">-->
+    <title>Drinking!</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
-	<link href="style.css" rel="stylesheet">
-
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/vue2-autocomplete.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-		<a class="navbar-brand" href="#">找找飲水機</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">找找飲水機</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-		<div class="collapse navbar-collapse navbar-collapse-center" id="navbarCollapse">
-			<ul class="nav navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#connectmodal" data-toggle="modal">聯繫</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<!-- Modal -->
-	<div class="modal fade" id="connectmodal">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">聯絡方式</h5>
-					<button type="button" class="close">
+        <div class="collapse navbar-collapse navbar-collapse-center" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#connectmodal" data-toggle="modal">聯繫</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="connectmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">聯絡方式</h5>
+                    <button type="button" class="close">
         </button>
-				</div>
-				<div class="modal-body">
-					<p>手機：0900-000-000</p>
-					<p>Facebook：kkkkkkkkk</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+                </div>
+                <div class="modal-body">
+                    <p>手機：0900-000-000</p>
+                    <p>Facebook：kkkkkkkkk</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div id="main_title">
-		<div class="story">
-			<div class="text-center main-text">
-				<h2>去找水!!!</h2>
-				<br>
-				<div class="ui-widget">
-					<label for="searchTerm"></label>
-					<!--
+    <div id="contain">
+        <div id="main_title">
+            <div class="story">
+                <div class="text-center main-text">
+                    <h2>去找水!!!</h2>
+                    <br>
+                    <div class="ui-widget">
+                        <label for="searchTerm"></label>
+                        <!--
 					<input id="searchbar" type="search">
 					<button id="btn_search" type="button">Search</button>
 -->
-					<div class="wrap">
-						<div class="search">
-							<input type="text" class="searchTerm" placeholder="想喝水嗎？喝水最健康！">
-							<button type="submit" class="searchButton">
+                        <div class="wrap">
+                            <div class="search">
+                                <input type="text" class="searchTerm" placeholder="想喝水嗎？" @keyup.enter="searching" v-model="input_text">
+                                <button type="submit" class="searchButton" @click="searching">
                             <i class="fa fa-search"></i>
                             </button>
-							<button type="submit" class="refreshButton" v-on:click="testbutton">
+                                <button type="submit" class="refreshButton" @click="refresh">
                             <i class="fa fa-refresh"></i>
                             </button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="map">
-	</div>
-	<div class="footer_bottom">
-		<p>&copy; 2017 by Thek.</p>
-	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
 
-	<!-- Bootstrap core JavaScript
+    <div class="footer_bottom">
+        <p>&copy; 2017 by Thek.</p>
+    </div>
+
+    <!-- Bootstrap core JavaScript
     ================================================== -->
-	<!--Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-	<!--	Vue的script-->
-	<script src="https://unpkg.com/vue"></script>
+    <!--Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <!--	Vue的script-->
+    <script src="https://unpkg.com/vue"></script>
 
-	<!-- Placed at the end of the document so the pages load faster -->
+    <!-- Placed at the end of the document so the pages load faster -->
 
-	<script src="js/vendor/popper.min.js"></script>
-	<script src="dist/js/bootstrap.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
 
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="js/ie10-viewport-bug-workaround.js"></script>
-	<script src="js/firebasemap.js"></script>
-	<script src="js/markerclusterer.js"></script>
-	<script src="js/underscore-min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/firebasemap.js"></script>
+    <script src="js/markerclusterer.js"></script>
+    <script src="js/underscore-min.js"></script>
 
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4i69kIcID3A4WKeJu9ICzCIQDytSe9Zk" async defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4i69kIcID3A4WKeJu9ICzCIQDytSe9Zk" async defer></script>
 
 </body>
 

@@ -9,6 +9,10 @@ body {
   height: 100%;
   font-family: "Noto Sans TC", sans-serif; }
 
+#contain {
+  height: 96%;
+  width: auto; }
+
 #map {
   height: 50%; }
 
@@ -81,8 +85,8 @@ input[type=search] {
     .ui-widget .wrap .search .searchButton {
       position: absolute;
       right: -3.125rem;
-      width: 2.2rem;
-      height: 2.2rem;
+      width: 2.3rem;
+      height: 2.3rem;
       border: 0.1rem solid #00B4CC;
       background: #00B4CC;
       text-align: center;
@@ -93,8 +97,8 @@ input[type=search] {
     .ui-widget .wrap .search .refreshButton {
       position: absolute;
       right: -6.25rem;
-      width: 2.2rem;
-      height: 2.2rem;
+      width: 2.3rem;
+      height: 2.3rem;
       border: 0.1rem solid #00B4CC;
       background: #00B4CC;
       text-align: center;
@@ -126,7 +130,7 @@ input[type=search] {
   text-align: center;
   vertical-align: middle;
   position: relative;
-  height: 1%; }
+  height: 4%; }
   .footer_bottom p {
     position: absolute;
     top: 45%;

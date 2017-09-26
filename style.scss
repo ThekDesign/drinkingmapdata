@@ -16,6 +16,11 @@ body {
 	font-family: $Mainfont;
 }
 
+#contain {
+    height: 96%;
+    width: auto;
+}
+
 #map {
 	height: $height-background / 2;
 }
@@ -101,8 +106,8 @@ input[type=search] {
 			.searchButton {
 				position: absolute;
 				right: -3.125rem;
-				width: 2.2rem;
-				height: 2.2rem;
+				width: 2.3rem;
+				height: 2.3rem;
 				border: 0.1rem solid #00B4CC;
 				background: #00B4CC;
 				text-align: center;
@@ -114,8 +119,8 @@ input[type=search] {
 			.refreshButton {
 				position: absolute;
 				right: -6.25rem;
-				width: 2.2rem;
-				height: 2.2rem;
+				width: 2.3rem;
+				height: 2.3rem;
 				border: 0.1rem solid #00B4CC;
 				background: #00B4CC;
 				text-align: center;
@@ -156,7 +161,7 @@ input[type=search] {
 	text-align: center;
 	vertical-align: middle;
 	position: relative;
-	height: 1%;
+	height: 4%;
 	p {
 		position: absolute;
 		top: 45%;
